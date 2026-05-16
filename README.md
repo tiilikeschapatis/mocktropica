@@ -2,7 +2,7 @@
 
 A fan-made, open-source browser recreation of the classic Poptropica adventure game — built with vanilla HTML5 Canvas, CSS, and JavaScript. No frameworks, no build tools, just open `index.html` and play.
 
-> **Live Demo:** [tiilikeschapatis.github.io/poptropica-mock](https://tiilikeschapatis.github.io/poptropica-mock)
+> **Live Demo:** [tiilikeschapatis.github.io/mocktropica](https://tiilikeschapatis.github.io/mocktropica)
 
 ![Island Select Screen](assets/screenshots/island-select.png)
 

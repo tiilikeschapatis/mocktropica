@@ -1,0 +1,9 @@
+{
+  "island": "jungle",
+  "name": "Jungle Island",
+  "description": "Find the lost relic hidden deep in the jungle ruins.",
+  "scenes": ["jungle-entry", "jungle-ruins"],
+  "startScene": "jungle-entry",
+  "completionFlag": "relic_returned",
+  "completionItem": "Sacred Relic"
+}

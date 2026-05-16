@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poptropica Mock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HUD -->
+  <div id="hud">
+    <div id="inventory-bar">
+      <span id="inventory-label">Inventory</span>
+      <div id="inventory-slots"></div>
+    </div>
+    <div id="player-info">
+      <span id="player-name">Explorer</span>
+    </div>
+  </div>
+
+  <!-- Main Canvas -->
+  <canvas id="gameCanvas" width="800" height="480"></canvas>
+
+  <!-- Dialogue Box -->
+  <div id="dialogue-box" class="hidden">
+    <div id="dialogue-speaker"></div>
+    <div id="dialogue-text"></div>
+    <button id="dialogue-next">Next ▶</button>
+  </div>
+
+  <!-- Island Select Screen -->
+  <div id="island-select">
+    <h1>🌴 Poptropica Mock</h1>
+    <p>Choose your island adventure!</p>
+    <div id="island-list">
+      <div class="island-card" data-island="jungle">
+        <div class="island-icon">🌿</div>
+        <h2>Jungle Island</h2>
+        <p>Find the lost relic hidden deep in the jungle ruins.</p>
+        <button class="play-btn" onclick="startIsland('jungle')">Play</button>
+      </div>
+      <div class="island-card locked" data-island="ocean">
+        <div class="island-icon">🌊</div>
+        <h2>Ocean Island</h2>
+        <p>Coming soon...</p>
+        <button class="play-btn" disabled>Locked</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/engine.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/dialogue.js"></script>
+  <script src="js/inventory.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

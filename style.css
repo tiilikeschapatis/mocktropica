@@ -1,0 +1,205 @@
+/* ─── Reset & Base ─────────────────────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #1a0a2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* ─── Canvas ────────────────────────────────────────────────── */
+#gameCanvas {
+  display: none;
+  border: 3px solid #ffd700;
+  border-radius: 4px;
+  image-rendering: pixelated;
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+}
+
+/* ─── HUD ───────────────────────────────────────────────────── */
+#hud {
+  display: none;
+  width: 800px;
+  background: #2a1a4e;
+  border: 2px solid #ffd700;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  padding: 6px 12px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#inventory-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#inventory-label {
+  font-size: 12px;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+#inventory-slots {
+  display: flex;
+  gap: 4px;
+}
+
+.inventory-slot {
+  width: 36px;
+  height: 36px;
+  background: #1a0a2e;
+  border: 2px solid #555;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.inventory-slot:hover { border-color: #ffd700; }
+.inventory-slot.active { border-color: #00e5ff; }
+
+#player-name {
+  font-size: 13px;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* ─── Dialogue Box ──────────────────────────────────────────── */
+#dialogue-box {
+  position: absolute;
+  bottom: calc(50vh - 240px + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 760px;
+  background: rgba(26, 10, 46, 0.97);
+  border: 3px solid #ffd700;
+  border-radius: 8px;
+  padding: 16px 20px;
+  z-index: 100;
+}
+
+#dialogue-box.hidden { display: none; }
+
+#dialogue-speaker {
+  font-size: 14px;
+  color: #ffd700;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+#dialogue-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #eee;
+  min-height: 40px;
+}
+
+#dialogue-next {
+  margin-top: 10px;
+  float: right;
+  background: #ffd700;
+  color: #1a0a2e;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#dialogue-next:hover { background: #ffe44d; }
+
+/* ─── Island Select ─────────────────────────────────────────── */
+#island-select {
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+#island-select h1 {
+  font-size: 48px;
+  color: #ffd700;
+  text-shadow: 0 0 20px rgba(255,215,0,0.5);
+  margin-bottom: 8px;
+}
+
+#island-select p {
+  color: #aaa;
+  margin-bottom: 32px;
+  font-size: 16px;
+}
+
+#island-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.island-card {
+  background: #2a1a4e;
+  border: 2px solid #ffd700;
+  border-radius: 12px;
+  padding: 24px;
+  width: 200px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.island-card:hover:not(.locked) {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.25);
+}
+
+.island-card.locked {
+  opacity: 0.45;
+  border-color: #555;
+  cursor: default;
+}
+
+.island-icon { font-size: 40px; margin-bottom: 10px; }
+
+.island-card h2 {
+  font-size: 18px;
+  color: #ffd700;
+  margin-bottom: 8px;
+}
+
+.island-card p {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 16px;
+}
+
+.play-btn {
+  background: #ffd700;
+  color: #1a0a2e;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.play-btn:hover:not(:disabled) { background: #ffe44d; }
+.play-btn:disabled { cursor: not-allowed; background: #555; color: #888; }
+
+/* ─── Utilities ─────────────────────────────────────────────── */
+.hidden { display: none !important; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

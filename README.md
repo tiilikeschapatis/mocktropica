@@ -1,14 +1,14 @@
-# 🌴 Poptropica Mock
+# 🌴 Mocktropica
 
 A fan-made, open-source browser recreation of the classic Poptropica adventure game — built with vanilla HTML5 Canvas, CSS, and JavaScript. No frameworks, no build tools, just open `index.html` and play.
 
-> **Live Demo:** [your-username.github.io/poptropica-mock](https://your-username.github.io/poptropica-mock)
+> **Live Demo:** [tiilikeschapatis.github.io/poptropica-mock](https://tiilikeschapatis.github.io/poptropica-mock)
 
 ![Island Select Screen](assets/screenshots/island-select.png)
 
 ---
 
-## 🎮 How to Play
+## How to Play
 
 | Key | Action |
 |-----|--------|
@@ -20,7 +20,7 @@ Walk up to an NPC and press **E** to start a conversation. Collect items, explor
 
 ---
 
-## ✅ Current Features
+## Current Features
 
 - Side-scrolling platformer physics (gravity, jump, collision)
 - Multi-scene worlds with exit triggers and seamless transitions
@@ -33,7 +33,7 @@ Walk up to an NPC and press **E** to start a conversation. Collect items, explor
 
 ---
 
-## 🗺️ Islands
+## Islands
 
 | Island | Status | Quest |
 |--------|--------|-------|
@@ -42,7 +42,7 @@ Walk up to an NPC and press **E** to start a conversation. Collect items, explor
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 poptropica-mock/
@@ -64,7 +64,7 @@ poptropica-mock/
 
 ---
 
-## 🔧 Adding a New Island
+## Adding a New Island
 
 ### 1. Add scenes to `js/scene.js`
 
@@ -120,7 +120,7 @@ function startIsland(islandId) {
 
 ---
 
-## 🧠 Architecture Overview
+## Architecture Overview
 
 ```
 Engine          → game loop, deltaTime, keyboard input, camera
@@ -136,7 +136,7 @@ Each system is a self-contained IIFE module — no bundler needed. To extend the
 
 ---
 
-## 🛠️ Recommended Tools
+## Recommended Tools
 
 | Tool | Purpose |
 |------|---------|
@@ -147,7 +147,7 @@ Each system is a self-contained IIFE module — no bundler needed. To extend the
 
 ---
 
-## 🚀 Deploying to GitHub Pages
+## Deploying to GitHub Pages
 
 1. Push your repo to GitHub
 2. Go to **Settings → Pages**
@@ -156,7 +156,7 @@ Each system is a self-contained IIFE module — no bundler needed. To extend the
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Pull requests are welcome! Here are some good first issues to tackle:
 
@@ -171,12 +171,6 @@ Please open an issue before starting large features so we can discuss the approa
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
-This is a fan project made for educational purposes. Poptropica is a trademark of Sandbox Networks, Inc. This project is not affiliated with or endorsed by the original creators.
-
----
-
-## 📄 License
-
-MIT — do whatever you want, just don't claim you made Poptropica.
+This is a fan project made for learning purposes. Poptropica is a trademark of Sandbox Networks, Inc. This project is not affiliated with or endorsed by the original creators.
